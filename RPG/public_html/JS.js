@@ -40,7 +40,7 @@ txtKeywords.onkeypress = function(e){
             document.getElementById("healthbar").innerHTML=health;
         }
         if(name==="bare hands"){
-            document.getElementById("body").innerHTML="You died.";
+           setTimeout(death, 5000);
         }
         else if(name==="sword"){
             p.innerHTML="You run to the sword by the pit, the monster sees and starts charging at you. Then you pick up the sword and stab him in the neck and he hits you in the shoulder. You pull the sword out and throw him in the pit.";
@@ -80,7 +80,21 @@ txtKeywords.onkeypress = function(e){
             document.getElementById("healthbar").innerHTML=health;
         }
         if(name==="call for help"){
-            p.innerHTML="A hesitant elf appears, shows you a path, and then keeps running. Do you follow ";
+            p.innerHTML="A hesitant elf appears, shows you a path, and then keeps running. Do you follow the elf or go your own way? (follow elf, go own way)";
+        }
+        if(name==="follow elf"){
+            p.innerHTML="He leads you to a ladder. What do you do? (not yet available)";
+        }
+        else if(name==="go own way"){
+            p.innerHTML="Congrats! You got lost. You can go back how you came or keep going. (go back, keep going)";
+        }
+        if(name==="go back"){
+            p.innerHTML="You get lost. Soon you will starve."
+            setTimeout(death, 10000);
+        }
+        if(name==="keep going"){
+            p.innerHTML="You get lost. Soon you will starve."
+            setTimeout(death, 10000);
         }
      }
         
@@ -91,4 +105,8 @@ function life(){
     if(life<=0){
         document.getElementById("body").innerHTML="Game Over";
     }
+}
+
+function death(){
+    document.getElementById("body").innerHTML="You died.";    
 }
