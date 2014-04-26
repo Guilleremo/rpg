@@ -40,10 +40,25 @@ txtKeywords.onkeypress = function(e){
             document.getElementById("healthbar").innerHTML=health;
         }
         if(name==="bare hands"){
-            document.getElementById("").innerHTML="You died.";
+            document.getElementById("body").innerHTML="You died.";
+        }
+        else if(name==="sword"){
+            p.innerHTML="You run to the sword by the pit, the monster sees and starts charging at you. Then you pick up the sword and stab him in the neck and he hits you in the shoulder. You pull the sword out and throw him in the pit.";
+            health-=30;
+            document.getElementById("healthbar").innerHTML=health;
         }
         else if(name==="trap door"){
-            p.innnerHTML="Wise choice, now climb down the ladder of the trap door. As you get to the bottom, the ladder breaks and you fall. There is no way back up. AS you are walking there is a strange man in your way, and to get by you have to make a choice. He tells you to either go right or left. Do you go right or left? (go right, go left)";
+            p.innnerHTML="Wise choice, now climb down the ladder of the trap door. As you get to the bottom, the ladder breaks, you fall, you lose a little health and there is no way back up. Then as you are walking there is a strange man in your way and he tells you something. I see you need to get by and I won't let you unless you choose a hand. Both are bad but you have to choose, right hand or left hand. (right hand, left hand)";
+            health-=15;
+            document.getElementById("healthbar").innerHTML=health;
+        }
+        if(name==="right hand"){
+            p.innerHTML="";
+            health-=30;
+            document.getElementById("healthbar").innerHTML=health;
+        }
+        else if(name==="left hand"){
+            p.innerHTML="";
             health-=15;
             document.getElementById("healthbar").innerHTML=health;
         }
@@ -65,7 +80,7 @@ txtKeywords.onkeypress = function(e){
             document.getElementById("healthbar").innerHTML=health;
         }
         if(name==="call for help"){
-            p.innerHTML="A hesitant elf appears, shows you a ladder, and then runs away.";
+            p.innerHTML="A hesitant elf appears, shows you a path, and then keeps running. Do you follow ";
         }
      }
         
