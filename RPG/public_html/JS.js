@@ -40,7 +40,7 @@ txtKeywords.onkeypress = function(e){
             document.getElementById("healthbar").innerHTML=health;
         }
         if(name==="bare hands"){
-            document.getElementById("body").innerHTML="You died.";
+           setTimeout(death, 5000);
         }
         else if(name==="sword"){
             p.innerHTML="You run to the sword by the pit, the monster sees and starts charging at you. Then you pick up the sword and stab him in the neck and he hits you in the shoulder. You pull the sword out and throw him in the pit.";
@@ -90,11 +90,11 @@ txtKeywords.onkeypress = function(e){
         }
         if(name==="go back"){
             p.innerHTML="You get lost. Soon you will starve."
-            document.getElementById("body").innerHTML="You died.";
+            setTimeout(death, 10000);
         }
         if(name==="keep going"){
             p.innerHTML="You get lost. Soon you will starve."
-            document.getElementById("body").innerHTML="You died.";
+            setTimeout(death, 10000);
         }
      }
         
@@ -105,4 +105,9 @@ function life(){
     if(life<=0){
         document.getElementById("body").innerHTML="Game Over";
     }
+}
+
+function death(){
+    document.getElementById("body").innerHTML="You died.";
+    document.getElementById("body").className=deadscreen;
 }
