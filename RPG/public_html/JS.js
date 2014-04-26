@@ -63,7 +63,7 @@ txtKeywords.onkeypress = function(e){
             document.getElementById("healthbar").innerHTML=health;
         }
         else if(document.getElementById("answer").value==="another way out"){
-            p.innerHTML="The door has a lock. You can either look for a key or opt to break the door with brute force. (look for key, use brute force)";
+            p.innerHTML="While lookig for another way out you find a door and the door has a lock. You can either look for a key or opt to break the door with brute force. (look for key, use brute force)";
         }
         if(name==="look for key"){
             p.innerHTML="Do you look to the floor or the wall? (look to floor, look at wall)";
