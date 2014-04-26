@@ -108,6 +108,5 @@ function life(){
 }
 
 function death(){
-    document.getElementById("body").innerHTML="You died.";
-    document.getElementById("body").className=deadscreen;
+    document.getElementById("body").innerHTML="You died.";    
 }
