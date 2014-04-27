@@ -7,3 +7,71 @@
     text-align: center;
     
 }
+
+#storyline{
+    font-family: Viner Hand ITC;
+    text-align: center;
+    margin: 60px 300px 60px 300px;
+}
+#healthbar{
+   font-family: Viner Hand ITC;
+    text-align: center;
+    display: inline-block;
+}
+#lolz{
+   font-family: Viner Hand ITC;
+    text-align: center;
+    display: inline-block;
+    padding: 0px 0px 0px 434px;
+}
+
+#answer{
+   text-align: center;  
+}
+
+#body{
+    background-color: black;
+    color: brown;
+    font-size: 20px;
+}
+
+#border{
+    border: 1px solid brown;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 14px;
+    margin: 20px 200px 20px 200px;
+}
+
+#image{
+    background-image: url("Mino1.jpg");
+}
+
+#image2{
+    background-image: url("monster.jpg");
+}
+
+#image3{
+    background-image: url("minotaur.jpg");
+}
+
+#image4{
+    background-image: url("fork.jpg");
+}
+
+#image5{
+    background-image: url("door.jpg");
+}
+
+#image6{
+    background-image: url("th.jpg");
+}
+
+.image7{
+    background-image: url("stonewall.jpg");
+    background-size: 100%;
+}
+
+#image{
+}

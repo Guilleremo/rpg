@@ -1,10 +1,12 @@
 var txtKeywords = document.getElementById("answer");
 var p=document.getElementById("storyline");
 var health="120";
+var image=document.getElementById("image");
 
 window.onload=function(){
     setInterval(life, 1000);
     document.getElementById("healthbar").innerHTML=health;
+
 }
 
 txtKeywords.onkeypress = function(e){
@@ -13,12 +15,15 @@ txtKeywords.onkeypress = function(e){
         p.innerHTML="Ahh, "+name+", your one of the fools that came in here to kill the minotaur. I see he has wiped out the rest of your crew, but kept you alive ... how odd, don't you think? (yes, no)";
         if(document.getElementById("answer").value==="no"){
             p.innerHTML="Well I sure do. Let's get you out of here. You can climb that wall or try and find another way out. (climb wall, another way out)";
+            document.body.style.color = "black";
         }
         else if(document.getElementById("answer").value==="yes"){
             p.innerHTML="Yes, quite odd indeed. Let's get you out of here. You can climb that wall or try and find another way out. (climb wall, another way out)";
+            
         }
         if(document.getElementById("answer").value==="climb wall"){
             p.innerHTML="Use the rope on the wall. Well you climb very fast, where to next? (left, right)";
+            //image.className="image7";
         }
         if(document.getElementById("answer").value==="left"){
             p.innerHTML='As you start turning the corner, you see a terrifying monster. Well, you can fight the monster or try and avoid injury and go down the trap door. (fight monster, trap door)';
@@ -36,11 +41,10 @@ txtKeywords.onkeypress = function(e){
         }
         else if(name==="be brave"){
             p.innerHTML="A very bold choice, there is a pit to your right with a sword you can use, or you can use your bare hands. (sword, bare hands)";
-            health-=30;
             document.getElementById("healthbar").innerHTML=health;
         }
         if(name==="bare hands"){
-           setTimeout(death, 5000);
+           setTimeout(death, 100);
         }
         else if(name==="sword"){
             p.innerHTML="You run to the sword by the pit, the monster sees and starts charging at you. Then you pick up the sword and stab him in the neck and he hits you in the shoulder. You pull the sword out and throw him in the pit.";
@@ -108,5 +112,10 @@ function life(){
 }
 
 function death(){
-    document.getElementById("body").innerHTML="You died.";    
+    document.getElementById("body").innerHTML="<h1> You died! </h1>";    
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "brown";
+    document.body.style.fontsize = "100px";
+    document.body.style.margin = "100px 550px 100px 625px";
+    
 }
